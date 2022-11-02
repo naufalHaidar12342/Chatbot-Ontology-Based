@@ -21,7 +21,7 @@ class MainWindow(PageWindow):
         self.mainLabel.setGeometry(QtCore.QRect(0, 0, 800, 240))
         self.mainLabel.setObjectName("mainLabel")
         self.mainLabel.setText(
-            "<html><head/><body><p align=\"center\"><span style=\"font-size:12pt\">Welcome to Mentore!<br>\
+            "<html><head/><body><p align=\"center\"><span style=\"font-size:12pt\">Welcome to Chatbot BECIKU!<br>\
              To begin, </span><span style=\"font-size:12pt; font-weight:bold\">Browse</span> \
              <span style=\"font-size:12pt\"> for an existing subject or </span> \
              <span style=\"font-size:12pt; font-weight:bold\">Add</span><span style=\"font-size:12pt\"> something<br>\
