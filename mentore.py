@@ -94,7 +94,7 @@ class Window(QtWidgets.QMainWindow):
     def register(self, widget: PageWindow, name: str) -> None:
         self.m_pages[name] = widget
         self.stacked_widget.addWidget(widget)
-        if (isinstance(widget, BrowseWindow) or isinstance(widget, MainWindow)):
+        if isinstance(widget, BrowseWindow) or isinstance(widget, MainWindow):
             widget.selectedConceptSignal.connect(self.selectedConceptName)
             widget.gotoSignal.connect(self.goto)
         elif isinstance(widget, AddConceptWindow):
