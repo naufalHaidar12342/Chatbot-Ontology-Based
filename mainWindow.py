@@ -67,11 +67,16 @@ class MainWindow(PageWindow):
         self.browse_pb.setGeometry(QtCore.QRect(630, 325, 106, 30))
         self.browse_pb.setObjectName("browse_pb")
         self.browse_pb.clicked.connect(self.make_handleButton("browse_pb"))
-        self.add_pb = QtWidgets.QPushButton("Add", self.centralwidget)
 
+        self.add_pb = QtWidgets.QPushButton("Add", self.centralwidget)
         self.add_pb.setGeometry(QtCore.QRect(630, 370, 106, 30))
         self.add_pb.setObjectName("add_pb")
         self.add_pb.clicked.connect(self.make_handleButton("add_pb"))
+
+        self.start_conversation=QtWidgets.QPushButton("Start conversation", self.centralwidget)
+        self.start_conversation.setGeometry(QtCore.QRect(630, 415, 106, 30))
+        self.start_conversation.setObjectName("start_conversation")
+        self.start_conversation.clicked.connect(self.make_handleButton("start_conversation"))
 
         self.setCentralWidget(self.centralwidget)
 
@@ -121,4 +126,6 @@ class MainWindow(PageWindow):
                 self.goto("add")
             elif button == "browse_pb":
                 self.goto("browse")
+            elif button == "start_conversation":
+                self.goto("start conversation")
         return handleButton

@@ -17,9 +17,9 @@ class StartConversationWindow(PageWindow):
         self.centralwidget = QtWidgets.QWidget()
         self.centralwidget.setObjectName("centralwidget")
 
-        self.add_pb = QtWidgets.QPushButton("Add", self.centralwidget)
+        self.add_pb = QtWidgets.QPushButton("start conversation", self.centralwidget)
         self.add_pb.setGeometry(QtCore.QRect(630, 370, 106, 30))
-        self.add_pb.setObjectName("add_pb")
+        self.add_pb.setObjectName("start_conversation")
         self.add_pb.clicked.connect(self.saveSentence)
         self.add_pb.setDisabled(1)
 

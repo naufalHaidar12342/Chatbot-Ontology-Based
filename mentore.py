@@ -10,10 +10,10 @@ from addQuestionWindow import AddQuestionWindow
 from helpWindow import HelpWindow
 from owlready2 import *
 import ontologyInterface as ontoInterface
+from startConversationWindow import StartConversationWindow
 
 
 class Window(QtWidgets.QMainWindow):
-
     ontologyPath = "ontology/CKB.owl"
     ontologyParentClass = "SchoolSubject"
 
@@ -47,6 +47,7 @@ class Window(QtWidgets.QMainWindow):
         self.register(AddQuestionWindow(), "addQuestion")
         self.register(BrowseWindow(), "browse")
         self.register(HelpWindow(self.lastPage), "help")
+        self.register(StartConversationWindow(), "startConversation")
 
         self.goto("main")
 
@@ -106,6 +107,9 @@ class Window(QtWidgets.QMainWindow):
         elif isinstance(widget, AddQuestionWindow):
             widget.questionSignal.connect(self.catchQuestion)
             widget.gotoSignal.connect(self.goto)
+        elif isinstance(widget, StartConversationWindow):
+            widget.sentenceSignal.connect(self.catchSentence)
+            widget.gotoSignal.connect(self.goto)
         else:
             widget.gotoSignal.connect(self.goto)
 
@@ -122,6 +126,9 @@ class Window(QtWidgets.QMainWindow):
                 if self.currentConcept != "none":
                     widget.recentChecker(self.currentConcept)
             elif name == "add":
+                if self.currentConcept != "none":
+                    widget.buttonsEnabler()
+            elif name == "start conversation":
                 if self.currentConcept != "none":
                     widget.buttonsEnabler()
 
