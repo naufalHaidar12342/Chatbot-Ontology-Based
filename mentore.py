@@ -108,7 +108,7 @@ class Window(QtWidgets.QMainWindow):
             widget.questionSignal.connect(self.catchQuestion)
             widget.gotoSignal.connect(self.goto)
         elif isinstance(widget, StartConversationWindow):
-            widget.sentenceSignal.connect(self.catchSentence)
+
             widget.gotoSignal.connect(self.goto)
         else:
             widget.gotoSignal.connect(self.goto)
@@ -128,7 +128,7 @@ class Window(QtWidgets.QMainWindow):
             elif name == "add":
                 if self.currentConcept != "none":
                     widget.buttonsEnabler()
-            elif name == "start conversation":
+            elif name == "startConversation":
                 if self.currentConcept != "none":
                     widget.buttonsEnabler()
 

@@ -3,7 +3,6 @@ from pageWindow import PageWindow
 
 
 class StartConversationWindow(PageWindow):
-
     sentenceSignal = QtCore.pyqtSignal(str, int)
 
     def __init__(self):
@@ -17,16 +16,16 @@ class StartConversationWindow(PageWindow):
         self.centralwidget = QtWidgets.QWidget()
         self.centralwidget.setObjectName("centralwidget")
 
-        self.add_pb = QtWidgets.QPushButton("start conversation", self.centralwidget)
+        self.add_pb = QtWidgets.QPushButton("startConversation", self.centralwidget)
         self.add_pb.setGeometry(QtCore.QRect(630, 370, 106, 30))
         self.add_pb.setObjectName("start_conversation")
         self.add_pb.clicked.connect(self.saveSentence)
         self.add_pb.setDisabled(1)
 
-        self.cancel_pb = QtWidgets.QPushButton("Cancel", self.centralwidget)
+        self.cancel_pb = QtWidgets.QPushButton("<- Back", self.centralwidget)
         self.cancel_pb.setGeometry(QtCore.QRect(505, 370, 106, 30))
         self.cancel_pb.setObjectName("cancel_pb")
-        self.cancel_pb.clicked.connect(self.goToAddMain)
+        self.cancel_pb.clicked.connect(self.goToMain)
 
         self.mainLabel = QtWidgets.QLabel(self.centralwidget)
         self.mainLabel.setGeometry(QtCore.QRect(0, 0, 800, 180))
@@ -38,7 +37,7 @@ class StartConversationWindow(PageWindow):
         self.sentenceLabel.setGeometry(QtCore.QRect(100, 145, 181, 21))
         self.sentenceLabel.setObjectName("sentenceLabel")
         self.sentenceLabel.setText(
-            "<html><head/><body><p align=\"left\">Insert sentence:</p></body></html>")
+            "<html><head/><body><p align=\"left\" style=\"font-size:14pt\">Masukkan pertanyaan Anda:</p></body></html>")
 
         self.sentence_lineEdit = QtWidgets.QLineEdit(self.centralwidget)
         self.sentence_lineEdit.setGeometry(QtCore.QRect(100, 170, 600, 30))
@@ -69,7 +68,7 @@ class StartConversationWindow(PageWindow):
         QtCore.QMetaObject.connectSlotsByName(self)
 
     def mainLabelUpdater(self, word: str):
-        labelString = "<html><head/><body><p align=\"center\"><span style=\"font-size:12pt\">You are about to enter a new </span> \
+        labelString = "<html><head/><body><p align=\"center\"><span style=\"font-size:16pt\">You are about to enter a new </span> \
                        <span style=\"font-size:12pt; font-weight:bold\">" + word + "</span> <span style=\"font-size:12pt\">\
                        sentence</span></p></body></html>"
         self.mainLabel.setText(labelString)
@@ -114,3 +113,6 @@ class StartConversationWindow(PageWindow):
         self.sentence_lineEdit.clear()
         self.resetNegWait()
         self.goto("add")
+
+    def goToMain(self):
+        self.goto("main")

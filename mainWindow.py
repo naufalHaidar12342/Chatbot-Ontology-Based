@@ -127,5 +127,5 @@ class MainWindow(PageWindow):
             elif button == "browse_pb":
                 self.goto("browse")
             elif button == "start_conversation":
-                self.goto("start conversation")
+                self.goto("startConversation")
         return handleButton
