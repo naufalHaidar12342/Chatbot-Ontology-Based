@@ -16,11 +16,11 @@ class StartConversationWindow(PageWindow):
         self.centralwidget = QtWidgets.QWidget()
         self.centralwidget.setObjectName("centralwidget")
 
-        self.add_pb = QtWidgets.QPushButton("startConversation", self.centralwidget)
+        self.add_pb = QtWidgets.QPushButton("send text", self.centralwidget)
         self.add_pb.setGeometry(QtCore.QRect(630, 370, 106, 30))
         self.add_pb.setObjectName("start_conversation")
         self.add_pb.clicked.connect(self.saveSentence)
-        self.add_pb.setDisabled(1)
+        self.add_pb.setDisabled(0)
 
         self.cancel_pb = QtWidgets.QPushButton("<- Back", self.centralwidget)
         self.cancel_pb.setGeometry(QtCore.QRect(505, 370, 106, 30))
@@ -34,15 +34,26 @@ class StartConversationWindow(PageWindow):
         self.mainLabelUpdater("positive")
 
         self.sentenceLabel = QtWidgets.QLabel(self.centralwidget)
-        self.sentenceLabel.setGeometry(QtCore.QRect(100, 145, 181, 21))
+        self.sentenceLabel.setGeometry(QtCore.QRect(100, 145, 200, 42))
         self.sentenceLabel.setObjectName("sentenceLabel")
         self.sentenceLabel.setText(
             "<html><head/><body><p align=\"left\" style=\"font-size:14pt\">Masukkan pertanyaan Anda:</p></body></html>")
-
+        self.sentenceLabel.setWordWrap(True)
         self.sentence_lineEdit = QtWidgets.QLineEdit(self.centralwidget)
         self.sentence_lineEdit.setGeometry(QtCore.QRect(100, 170, 600, 30))
         self.sentence_lineEdit.setObjectName("sentence_lineEdit")
         self.sentence_lineEdit.textChanged.connect(self.disableButton)
+
+        self.sentenceLabel = QtWidgets.QLabel(self.centralwidget)
+        self.sentenceLabel.setGeometry(QtCore.QRect(100, 225, 590, 21))
+        self.sentenceLabel.setObjectName("sentenceLabel")
+        self.sentenceLabel.setText(
+            "<html><head/><body><p align=\"left\" style=\"font-size:14pt\">Chatbot:</p></body></html>")
+
+        self.chatbot_lineEdit = QtWidgets.QLineEdit(self.centralwidget)
+        self.chatbot_lineEdit.setGeometry(QtCore.QRect(100, 250, 600, 30))
+        self.chatbot_lineEdit.setObjectName("chatbot_lineEdit")
+        self.chatbot_lineEdit.textChanged.connect(self.disableButton)
 
         self.positive_checkBox = QtWidgets.QCheckBox(
             "Positive sentence", self.centralwidget)
@@ -69,7 +80,7 @@ class StartConversationWindow(PageWindow):
 
     def mainLabelUpdater(self, word: str):
         labelString = "<html><head/><body><p align=\"center\"><span style=\"font-size:16pt\">You are about to enter a new </span> \
-                       <span style=\"font-size:12pt; font-weight:bold\">" + word + "</span> <span style=\"font-size:12pt\">\
+                       <span style=\"font-size:14pt; font-weight:bold\">" + word + "</span> <span style=\"font-size:14pt\">\
                        sentence</span></p></body></html>"
         self.mainLabel.setText(labelString)
 
