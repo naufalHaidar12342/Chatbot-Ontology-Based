@@ -20,11 +20,12 @@ class Window(QtWidgets.QMainWindow):
     def __init__(self, parent=None):
         super().__init__(parent)
 
-        self.resize(1920, 1080)
+        self.resize(800, 600)
         palette = QtGui.QPalette()
         palette = mentorePaletteSetter(palette)
         self.setPalette(palette)
         self.setWindowIcon(QtGui.QIcon('images/mentore_logo.svg'))
+        # self.setWindowIcon(QtGui.QIcon('images/dpmtsp_logo.png'))
 
         self.ontology = get_ontology(self.ontologyPath)
         self.ontology.load()
@@ -82,6 +83,7 @@ class Window(QtWidgets.QMainWindow):
         logoLabel = QtWidgets.QLabel(self)
         logoLabel.setGeometry(350, 330, 0, 0)
         logoPixmap = QtGui.QPixmap('images/mentore_logo.svg')
+        # logoPixmap = QtGui.QPixmap('images/dpmtsp_logo.png')
         logoPixmap = logoPixmap.scaled(100, 100, QtCore.Qt.KeepAspectRatio)
         logoLabel.setPixmap(logoPixmap)
         logoLabel.resize(logoPixmap.width(), logoPixmap.height())

@@ -1,0 +1,213 @@
+@prefix : <http://www.semanticweb.org/acer/ontologies/2022/10/7/pizza-related#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/acer/ontologies/2022/10/7/pizza-related> .
+
+<http://www.semanticweb.org/acer/ontologies/2022/10/7/pizza-related> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/acer/ontologies/2022/10/7/pizza-related#OWLObjectProperty_3cf8d8a5_f200_4839_b636_8df977d5cdff
+:OWLObjectProperty_3cf8d8a5_f200_4839_b636_8df977d5cdff rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf :OWLObjectProperty_930c162d_4f13_4b24_b43b_bc3573fd6015 ;
+                                                        rdfs:label "has_spiciness"@en .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2022/10/7/pizza-related#OWLObjectProperty_3d4bfcab_1e47_4b82_a1a2_fc10e49f68c4
+:OWLObjectProperty_3d4bfcab_1e47_4b82_a1a2_fc10e49f68c4 rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf :OWLObjectProperty_7a5b9525_6409_4f50_9b30_080b86688a0c ;
+                                                        rdfs:label "has_topping"@en .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2022/10/7/pizza-related#OWLObjectProperty_4b47bdcb_fec6_48bd_b6de_d053defc6fc9
+:OWLObjectProperty_4b47bdcb_fec6_48bd_b6de_d053defc6fc9 rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf :OWLObjectProperty_7a5b9525_6409_4f50_9b30_080b86688a0c ;
+                                                        rdfs:label "has_base"@en .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2022/10/7/pizza-related#OWLObjectProperty_7a5b9525_6409_4f50_9b30_080b86688a0c
+:OWLObjectProperty_7a5b9525_6409_4f50_9b30_080b86688a0c rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf owl:topObjectProperty ;
+                                                        rdfs:label "relational_property"@en .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2022/10/7/pizza-related#OWLObjectProperty_930c162d_4f13_4b24_b43b_bc3573fd6015
+:OWLObjectProperty_930c162d_4f13_4b24_b43b_bc3573fd6015 rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf owl:topObjectProperty ;
+                                                        rdfs:label "modifier_property"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/acer/ontologies/2022/10/7/pizza-related#OWLClass_08d8cc20_8dc9_4ed5_ab30_83496bcd2b0e
+:OWLClass_08d8cc20_8dc9_4ed5_ab30_83496bcd2b0e rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_48cf62d3_cf4f_44f6_bceb_14f031170d0b ;
+                                               rdfs:label "American_favourite"@en .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2022/10/7/pizza-related#OWLClass_2309f4f4_5a56_4487_8c6c_2b60bb873971
+:OWLClass_2309f4f4_5a56_4487_8c6c_2b60bb873971 rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_9dcc0d7c_446d_41af_bf1f_1c0139047074 ;
+                                               owl:disjointWith :OWLClass_729868f0_ce43_4997_a01b_032fcc089c4b ;
+                                               rdfs:label "Value"@en .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2022/10/7/pizza-related#OWLClass_2d60cad8_e7cd_4ff9_8665_c1da625dd612
+:OWLClass_2d60cad8_e7cd_4ff9_8665_c1da625dd612 rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_48cf62d3_cf4f_44f6_bceb_14f031170d0b ;
+                                               rdfs:label "Splitza"@en .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2022/10/7/pizza-related#OWLClass_3fa33471_fb26_4515_9298_8b4e644f4bf5
+:OWLClass_3fa33471_fb26_4515_9298_8b4e644f4bf5 rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_e368b3d2_3a52_42cf_b7ca_9c52a3401fe5 ;
+                                               rdfs:label "Hot_value"@en .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2022/10/7/pizza-related#OWLClass_41611ce3_454f_4fff_bd44_33a3fe9cbec5
+:OWLClass_41611ce3_454f_4fff_bd44_33a3fe9cbec5 rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_5cdbef9e_bb6f_4ef8_9bf6_b1b0ed00312a ;
+                                               rdfs:label "Thick_crush_base"@en .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2022/10/7/pizza-related#OWLClass_48cf62d3_cf4f_44f6_bceb_14f031170d0b
+:OWLClass_48cf62d3_cf4f_44f6_bceb_14f031170d0b rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_729868f0_ce43_4997_a01b_032fcc089c4b ;
+                                               rdfs:label "Pizza"@en .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2022/10/7/pizza-related#OWLClass_559957fe_679f_43ba_acc8_b3533d4d59de
+:OWLClass_559957fe_679f_43ba_acc8_b3533d4d59de rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_e368b3d2_3a52_42cf_b7ca_9c52a3401fe5 ;
+                                               rdfs:label "Medium_value"@en .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2022/10/7/pizza-related#OWLClass_5cdbef9e_bb6f_4ef8_9bf6_b1b0ed00312a
+:OWLClass_5cdbef9e_bb6f_4ef8_9bf6_b1b0ed00312a rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_729868f0_ce43_4997_a01b_032fcc089c4b ;
+                                               rdfs:label "Pizza_base"@en .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2022/10/7/pizza-related#OWLClass_60b362aa_1a93_4290_817e_d554093405b8
+:OWLClass_60b362aa_1a93_4290_817e_d554093405b8 rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_e368b3d2_3a52_42cf_b7ca_9c52a3401fe5 ;
+                                               rdfs:label "Mild_value"@en .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2022/10/7/pizza-related#OWLClass_715c86e2_86f7_47d6_a05d_83e493d0b757
+:OWLClass_715c86e2_86f7_47d6_a05d_83e493d0b757 rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_48cf62d3_cf4f_44f6_bceb_14f031170d0b ;
+                                               rdfs:label "Super_supreme"@en .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2022/10/7/pizza-related#OWLClass_729868f0_ce43_4997_a01b_032fcc089c4b
+:OWLClass_729868f0_ce43_4997_a01b_032fcc089c4b rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_9dcc0d7c_446d_41af_bf1f_1c0139047074 ;
+                                               rdfs:label "Independent_entity"@en .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2022/10/7/pizza-related#OWLClass_7757e592_b16f_41a4_8dc1_9a2021bca4db
+:OWLClass_7757e592_b16f_41a4_8dc1_9a2021bca4db rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_48cf62d3_cf4f_44f6_bceb_14f031170d0b ;
+                                               rdfs:label "Cheeseburger"@en .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2022/10/7/pizza-related#OWLClass_81692ea7_706d_4b68_a201_cd6c577b541f
+:OWLClass_81692ea7_706d_4b68_a201_cd6c577b541f rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_48cf62d3_cf4f_44f6_bceb_14f031170d0b ;
+                                               rdfs:label "Frankfurter_bbq"@en .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2022/10/7/pizza-related#OWLClass_880a7187_23bf_4fed_bd00_0b172fe7dec6
+:OWLClass_880a7187_23bf_4fed_bd00_0b172fe7dec6 rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_9422e32a_986e_4547_a3da_46051b86c2f3 ;
+                                               rdfs:label "Vegetable_topping"@en .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2022/10/7/pizza-related#OWLClass_89a8cd2d_ddb1_4a7e_be1e_da2e17a0038f
+:OWLClass_89a8cd2d_ddb1_4a7e_be1e_da2e17a0038f rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_9422e32a_986e_4547_a3da_46051b86c2f3 ;
+                                               rdfs:label "Fruit_topping"@en .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2022/10/7/pizza-related#OWLClass_93e10ebc_f308_4d46_8507_5fdbe3eaee2a
+:OWLClass_93e10ebc_f308_4d46_8507_5fdbe3eaee2a rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_48cf62d3_cf4f_44f6_bceb_14f031170d0b ;
+                                               rdfs:label "Meat_lover"@en .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2022/10/7/pizza-related#OWLClass_9422e32a_986e_4547_a3da_46051b86c2f3
+:OWLClass_9422e32a_986e_4547_a3da_46051b86c2f3 rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_729868f0_ce43_4997_a01b_032fcc089c4b ;
+                                               rdfs:label "Pizza_topping"@en .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2022/10/7/pizza-related#OWLClass_9dcc0d7c_446d_41af_bf1f_1c0139047074
+:OWLClass_9dcc0d7c_446d_41af_bf1f_1c0139047074 rdf:type owl:Class ;
+                                               rdfs:label "Domain_entity"@en .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2022/10/7/pizza-related#OWLClass_b4edfe56_a017_4bda_a9e6_c92fc5f8bb2c
+:OWLClass_b4edfe56_a017_4bda_a9e6_c92fc5f8bb2c rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_48cf62d3_cf4f_44f6_bceb_14f031170d0b ;
+                                               rdfs:label "Pepperoni"@en .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2022/10/7/pizza-related#OWLClass_d55a0278_265b_45bf_a2b3_16d147ff6f74
+:OWLClass_d55a0278_265b_45bf_a2b3_16d147ff6f74 rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_48cf62d3_cf4f_44f6_bceb_14f031170d0b ;
+                                               rdfs:label "Meat_monsta"@en .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2022/10/7/pizza-related#OWLClass_e368b3d2_3a52_42cf_b7ca_9c52a3401fe5
+:OWLClass_e368b3d2_3a52_42cf_b7ca_9c52a3401fe5 rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_2309f4f4_5a56_4487_8c6c_2b60bb873971 ,
+                                                               [ rdf:type owl:Class ;
+                                                                 owl:unionOf ( :OWLClass_3fa33471_fb26_4515_9298_8b4e644f4bf5
+                                                                               :OWLClass_559957fe_679f_43ba_acc8_b3533d4d59de
+                                                                               :OWLClass_60b362aa_1a93_4290_817e_d554093405b8
+                                                                             )
+                                                               ] ;
+                                               rdfs:label "Spiciness_value"@en .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2022/10/7/pizza-related#OWLClass_ea4a640f_d0c3_478e_9955_4805b2d78236
+:OWLClass_ea4a640f_d0c3_478e_9955_4805b2d78236 rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_9422e32a_986e_4547_a3da_46051b86c2f3 ;
+                                               rdfs:label "Cheese_topping"@en .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2022/10/7/pizza-related#OWLClass_fbf3fefc_fde4_4db5_b6ba_1944bc16c467
+:OWLClass_fbf3fefc_fde4_4db5_b6ba_1944bc16c467 rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_5cdbef9e_bb6f_4ef8_9bf6_b1b0ed00312a ;
+                                               rdfs:label "Thin_crush_base"@en .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :OWLClass_3fa33471_fb26_4515_9298_8b4e644f4bf5
+                :OWLClass_559957fe_679f_43ba_acc8_b3533d4d59de
+                :OWLClass_60b362aa_1a93_4290_817e_d554093405b8
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :OWLClass_48cf62d3_cf4f_44f6_bceb_14f031170d0b
+                :OWLClass_5cdbef9e_bb6f_4ef8_9bf6_b1b0ed00312a
+                :OWLClass_9422e32a_986e_4547_a3da_46051b86c2f3
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

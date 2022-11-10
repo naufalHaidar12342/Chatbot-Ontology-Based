@@ -29,7 +29,8 @@ def main():
         sentence = input("U: ")
         sentence = sentence.replace(" ", "_")
         response = requests.get(BASE + "caresses/" + str(client_id) + "/" + sentence, verify=False)
-        # print("Response time: ", response.elapsed.total_seconds())
+        print(response)
+        print("Response time: ", response.elapsed.total_seconds())
         intent_reply = response.json()['intent_reply']
         reply = response.json()['reply']
         plan = response.json()['plan']

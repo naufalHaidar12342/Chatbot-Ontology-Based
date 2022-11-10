@@ -21,12 +21,12 @@ class MainWindow(PageWindow):
         self.mainLabel.setGeometry(QtCore.QRect(0, 0, 800, 240))
         self.mainLabel.setObjectName("mainLabel")
         self.mainLabel.setText(
-            "<html><head/><body><p align=\"center\"><span style=\"font-size:12pt\">Welcome to Chatbot Dashboard!<br>\
+            "<html><head/><body><p align=\"center\"><span style=\"font-size:14pt\">Welcome to Chatbot BECIKU!<br>\
              To begin, </span><span style=\"font-size:12pt; font-weight:bold\">Browse</span> \
-             <span style=\"font-size:12pt\"> for an existing subject or </span> \
-             <span style=\"font-size:12pt; font-weight:bold\">Add</span><span style=\"font-size:12pt\"> something<br>\
-             Press the </span><span style=\"font-size:12pt; font-weight:bold\">Help</span> \
-             <span style=\"font-size:12pt\"> button at any time if you need assistance</span></p></body></html>")
+             <span style=\"font-size:14pt\"> for an existing subject or </span> \
+             <span style=\"font-size:14pt; font-weight:bold\">Add</span><span style=\"font-size:14pt\"> something<br>\
+             Press the </span><span style=\"font-size:14pt; font-weight:bold\">Help</span> \
+             <span style=\"font-size:14pt\"> button at any time if you need assistance</span></p></body></html>")
 
         self.recentLabel = QtWidgets.QLabel(self.centralwidget)
         self.recentLabel.setGeometry(QtCore.QRect(54, 260, 180, 51))
@@ -73,10 +73,10 @@ class MainWindow(PageWindow):
         self.add_pb.setObjectName("add_pb")
         self.add_pb.clicked.connect(self.make_handleButton("add_pb"))
 
-        self.start_conversation=QtWidgets.QPushButton("Start conversation", self.centralwidget)
-        self.start_conversation.setGeometry(QtCore.QRect(630, 415, 106, 30))
-        self.start_conversation.setObjectName("start_conversation")
-        self.start_conversation.clicked.connect(self.make_handleButton("start_conversation"))
+        # self.start_conversation=QtWidgets.QPushButton("Start conversation", self.centralwidget)
+        # self.start_conversation.setGeometry(QtCore.QRect(630, 415, 120, 30))
+        # self.start_conversation.setObjectName("start_conversation")
+        # self.start_conversation.clicked.connect(self.make_handleButton("start_conversation"))
 
         self.setCentralWidget(self.centralwidget)
 
