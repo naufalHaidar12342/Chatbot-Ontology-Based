@@ -20,7 +20,7 @@ class Window(QtWidgets.QMainWindow):
     def __init__(self, parent=None):
         super().__init__(parent)
 
-        self.resize(1920, 1080)
+        self.resize(800, 600)
         palette = QtGui.QPalette()
         palette = mentorePaletteSetter(palette)
         self.setPalette(palette)
