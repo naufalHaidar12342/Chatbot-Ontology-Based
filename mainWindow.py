@@ -73,10 +73,10 @@ class MainWindow(PageWindow):
         self.add_pb.setObjectName("add_pb")
         self.add_pb.clicked.connect(self.make_handleButton("add_pb"))
 
-        self.start_conversation=QtWidgets.QPushButton("Start conversation", self.centralwidget)
-        self.start_conversation.setGeometry(QtCore.QRect(630, 415, 120, 30))
-        self.start_conversation.setObjectName("start_conversation")
-        self.start_conversation.clicked.connect(self.make_handleButton("start_conversation"))
+        # self.start_conversation=QtWidgets.QPushButton("Start conversation", self.centralwidget)
+        # self.start_conversation.setGeometry(QtCore.QRect(630, 415, 120, 30))
+        # self.start_conversation.setObjectName("start_conversation")
+        # self.start_conversation.clicked.connect(self.make_handleButton("start_conversation"))
 
         self.setCentralWidget(self.centralwidget)
 
