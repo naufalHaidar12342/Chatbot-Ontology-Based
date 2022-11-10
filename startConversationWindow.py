@@ -34,7 +34,7 @@ class StartConversationWindow(PageWindow):
         self.mainLabelUpdater("positive")
 
         self.sentenceLabel = QtWidgets.QLabel(self.centralwidget)
-        self.sentenceLabel.setGeometry(QtCore.QRect(100, 145, 181, 21))
+        self.sentenceLabel.setGeometry(QtCore.QRect(100, 145, 185, 31))
         self.sentenceLabel.setObjectName("sentenceLabel")
         self.sentenceLabel.setText(
             "<html><head/><body><p align=\"left\" style=\"font-size:14pt\">Masukkan pertanyaan Anda:</p></body></html>")
